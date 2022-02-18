@@ -1,20 +1,20 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import store from "../redux/store";
 import { Provider } from "react-redux";
-import BellIcon from "../components/bell";
-import Addnoti from "../components/AddNoti";
 import storeBasic from "../redux/storebasic";
 import styles from "../styles/Home.module.css";
-import Removenoti from "../components/readNoti";
-import Bellbasic from "../components/bellbasic";
-import BellContext from "../components/BellContext";
-import Addnotibasic from "../components/Addnotibasic";
-import Removenotibasic from "../components/readNotibasic";
-import AddnotiContext from "../components/AddnotiContext";
-import ReadnotiContext from "../components/ReadnotiContext";
-import React from "react";
+import BellIcon from "../components/Redux-ToolKit/bell";
+import Addnoti from "../components/Redux-ToolKit/AddNoti";
+import Removenoti from "../components/Redux-ToolKit/readNoti";
+import Bellbasic from "../components/redux-Basic/bellbasic";
+import BellContext from "../components/Context/BellContext";
+import Addnotibasic from "../components/redux-Basic/Addnotibasic";
+import Removenotibasic from "../components/redux-Basic/readNotibasic";
+import AddnotiContext from "../components/Context/AddnotiContext";
+import ReadnotiContext from "../components/Context/ReadnotiContext";
 
 export const NotiContext = React.createContext();
 

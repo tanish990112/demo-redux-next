@@ -1,4 +1,4 @@
-import styles from "../styles/Count.module.css";
+import styles from "../../styles/Count.module.css";
 import { Notification } from "grommet-icons";
 import { useSelector } from "react-redux";
 const Bellbasic = () => {

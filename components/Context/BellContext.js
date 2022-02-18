@@ -1,7 +1,7 @@
 import { Notification } from "grommet-icons";
-import styles from "../styles/Count.module.css";
+import styles from "../../styles/Count.module.css";
 import { useContext } from "react";
-import { NotiContext } from "../pages";
+import { NotiContext } from "../../pages/index";
 const BellContext = () => {
   const notiCount = useContext(NotiContext);
   return (

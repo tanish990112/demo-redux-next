@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { readNoti } from "../redux/reducer";
-import styles from "../styles/Home.module.css";
+import { readNoti } from "../../redux/reducer";
+import styles from "../../styles/Home.module.css";
 function Removenoti() {
   const dispatch = useDispatch();
 

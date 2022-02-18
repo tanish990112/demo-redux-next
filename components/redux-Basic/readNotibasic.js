@@ -1,5 +1,4 @@
-import styles from "../styles/Home.module.css";
-import storeBasic from "../redux/storebasic";
+import styles from "../../styles/Home.module.css";
 import { useDispatch } from "react-redux";
 function Removenotibasic() {
   const dispatch = useDispatch();

@@ -1,20 +1,18 @@
+import styles from "../../styles/Home.module.css";
 import { useDispatch } from "react-redux";
-import { recieveNoti } from "../redux/reducer";
-import styles from "../styles/Home.module.css";
-function Addnoti() {
+function Addnotibasic() {
   const dispatch = useDispatch();
-
   function recieveNotification() {
-    dispatch(recieveNoti());
+    dispatch({ type: "addNotifications" });
   }
   return (
     <>
       <button onClick={recieveNotification} className={styles.card}>
-        <h2>Recieve Notification Toolkit &rarr;</h2>
+        <h2>Recieve Notification baisc&rarr;</h2>
         <p>Find in-depth information about Next.js features and API.</p>
       </button>
     </>
   );
 }
 
-export default Addnoti;
+export default Addnotibasic;
