@@ -36,13 +36,13 @@ export default function Home() {
       <main className={styles.main}>
         <Provider store={store}>
           <BellIcon />
-
           <h2 className={styles.title}>This For Redux and ReduxToolkit</h2>
           <div className={styles.grid}>
             <Addnoti />
             <Removenoti />
           </div>
         </Provider>
+
         <NotiContext.Provider value={notiCount}>
           <BellContext />
           <h2 className={styles.title}>This For useContext</h2>
@@ -55,6 +55,7 @@ export default function Home() {
             </button>
           </div>
         </NotiContext.Provider>
+
         <Provider store={storeBasic}>
           <Bellbasic />
           <h2 className={styles.title}>This For Redux basic</h2>
@@ -64,6 +65,7 @@ export default function Home() {
           </div>
         </Provider>
       </main>
+
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
