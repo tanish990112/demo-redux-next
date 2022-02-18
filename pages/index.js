@@ -10,8 +10,23 @@ import Removenoti from "../components/readNoti";
 import Addnotibasic from "../components/Addnotibasic";
 import Removenotibasic from "../components/readNotibasic";
 import Bellbasic from "../components/bellbasic";
+import { useState } from "react";
+import BellContext from "../components/BellContext";
+import AddnotiContext from "../components/AddnotiContext";
+import ReadnotiContext from "../components/ReadnotiContext";
+import React from "react";
+
+export const NotiContext = React.createContext();
 
 export default function Home() {
+  const [notiCount, setNotiCount] = useState(0);
+  function incrementNoti() {
+    setNotiCount(notiCount + 1);
+  }
+  function decrementNoti() {
+    if (notiCount > 0) setNotiCount(notiCount - 1);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,17 +37,27 @@ export default function Home() {
         <Provider store={store}>
           <BellIcon />
 
-          <h1 className={styles.title}>
-            Welcome to <a href="#">Next.js!</a>
-          </h1>
+          <h2 className={styles.title}>This For Redux and ReduxToolkit</h2>
           <div className={styles.grid}>
             <Addnoti />
             <Removenoti />
           </div>
         </Provider>
-
+        <NotiContext.Provider value={notiCount}>
+          <BellContext />
+          <h2 className={styles.title}>This For useContext</h2>
+          <div className={styles.grid}>
+            <button className={styles.card} onClick={incrementNoti}>
+              <AddnotiContext />
+            </button>
+            <button className={styles.card} onClick={decrementNoti}>
+              <ReadnotiContext />
+            </button>
+          </div>
+        </NotiContext.Provider>
         <Provider store={storeBasic}>
           <Bellbasic />
+          <h2 className={styles.title}>This For Redux basic</h2>
           <div className={styles.grid}>
             <Addnotibasic />
             <Removenotibasic />

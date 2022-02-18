@@ -9,8 +9,8 @@ function Addnoti() {
   }
   return (
     <>
-      <button onClick={() => recieveNotification()} className={styles.card}>
-        <h2>Recieve Notification &rarr;</h2>
+      <button onClick={recieveNotification} className={styles.card}>
+        <h2>Recieve Notification Toolkit &rarr;</h2>
         <p>Find in-depth information about Next.js features and API.</p>
       </button>
     </>
